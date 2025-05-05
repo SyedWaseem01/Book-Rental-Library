@@ -34,7 +34,7 @@ public class BuyBooksServlet extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("CustomerHome.html");
             rd.include(req, res);
             StoreUtil.setActiveTab(pw, "cart");
-            pw.println("<div class=\"tab hd brown \">Books Available In Our Store</div>");
+            pw.println("<div class=\"tab hd brown \">Books Available In Our Library</div>");
             pw.println("<div class=\"tab\"><form action=\"buys\" method=\"post\">");
             pw.println("<table>\r\n" +
                     "			<tr>\r\n" +

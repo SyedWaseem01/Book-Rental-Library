@@ -1,4 +1,4 @@
-package servlets;
+    package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -46,7 +46,7 @@ public class StoreBookServlet extends HttpServlet {
 
             // Read the books from the database with the respective bookIds
             List<Book> books = bookService.getAllBooks();
-            pw.println("<div id='topmid' style='background-color:grey'>Books Available In the Store</div>");
+            pw.println("<div id='topmid' style='background-color:grey'>Books Available In the Library</div>");
             pw.println("<table class=\"table table-hover\" style='background-color:white'>\r\n"
                     + "  <thead>\r\n"
                     + "    <tr style='background-color:black; color:white;'>\r\n"
@@ -61,7 +61,7 @@ public class StoreBookServlet extends HttpServlet {
                     + "  <tbody>\r\n");
             if (books == null || books.size() == 0) {
                 pw.println("    <tr style='background-color:green'>\r\n"
-                        + "      <th scope=\"row\" colspan='6' style='color:yellow; text-align:center;'> No Books Available in the store </th>\r\n"
+                        + "      <th scope=\"row\" colspan='6' style='color:yellow; text-align:center;'> No Books Available in the Library </th>\r\n"
                         + "    </tr>\r\n");
             }
             for (Book book : books) {
